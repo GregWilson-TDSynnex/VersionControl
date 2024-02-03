@@ -18,7 +18,7 @@
                 "description": "This analytic will detect login fails greater than 3. ",
                 "severity": "Medium",
                 "enabled": true,
-                "query": "SecurityEvent\n| where Activity has \"4625\"\n| summarize count() by IpAddress, Computer\n| where count_ >3 \n\n\n",
+                "query": "SecurityEvent\n| where Activity has \"4625\"\n| summarize count() by IpAddress, Computer\n| where count_ >5 \n\n\n",
                 "queryFrequency": "PT5M",
                 "queryPeriod": "PT5M",
                 "triggerOperator": "GreaterThan",
